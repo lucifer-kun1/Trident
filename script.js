@@ -195,3 +195,4 @@ document.addEventListener('DOMContentLoaded', () => {
         statsObserver.observe(stat);
     });
 });
+

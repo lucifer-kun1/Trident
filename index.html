@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
+    
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -22,13 +22,22 @@
                 <a href="apps.html" class="nav-link">Apps</a>
                 <a href="premium.html" class="nav-link">Premium</a>
                 <div class="nav-dropdown">
+                    <a href="#" class="nav-link">Authority <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="authority.html">Developers</a>
+                        <a href="authority.html#partners">Partners</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
                     <a href="#" class="nav-link">Legal <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="privacy.html">Privacy Policy</a>
                         <a href="tos.html">Terms of Service</a>
                     </div>
                 </div>
-                <!-- Mobile-only links -->
+                
+                <a href="authority.html" class="nav-link mobile-only">Developers</a>
+                <a href="authority.html#partners" class="nav-link mobile-only">Partners</a>
                 <a href="privacy.html" class="nav-link mobile-only">Privacy Policy</a>
                 <a href="tos.html" class="nav-link mobile-only">Terms of Service</a>
             </div>
@@ -40,7 +49,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -54,6 +63,10 @@
                         <i class="fab fa-discord"></i>
                         Invite Trident
                     </a>
+                    <a href="YOUR_DASHBOARD_LINK_HERE" class="btn btn-dashboard">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dashboard
+                    </a>
                     <a href="https://discord.gg/lovers-arenaa" class="btn btn-secondary">
                         <i class="fas fa-users"></i>
                         Join Server
@@ -62,7 +75,7 @@
             </div>
         </div>
         
-        <!-- Animated Background Elements -->
+        
         <div class="hero-bg-elements">
             <div class="floating-element"></div>
             <div class="floating-element"></div>
@@ -70,35 +83,89 @@
         </div>
     </section>
 
-    <!-- Developers Section -->
-    <section class="developers">
+   
+    <section class="features-section">
         <div class="container">
-            <h2>Meet Our Developers</h2>
-            <p class="section-subtitle">The brilliant minds behind Trident Bot</p>
+            <h2 style="text-align: center; font-size: 3rem; margin-bottom: 1rem; color: #ffd700; text-shadow: 0 0 20px #ffd700;">Powerful Features</h2>
+            <p class="section-subtitle">Everything you need to protect and manage your Discord server</p>
             
-            <div class="developers-grid">
-                <div class="developer-card">
-                    <div class="developer-avatar">
-                        <img src="https://cdn.discordapp.com/attachments/1247058898846748705/1397532284667560007/saffi45.png?ex=688210dd&is=6880bf5d&hm=ec6be9ddfed4ca86921550a05b141a9f018dfcb7999934969fb6784c9ac9f179&" alt="Anvi">
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Anvi</h3>
-                    <p class="developer-role">Lead Developer & Founder</p>
-                    <p class="developer-bio">Creator of Trident Bot with expertise in Discord bot development and server security systems.</p>
+                    <h3>Anti-Nuke Protection</h3>
+                    <p>Advanced security system that detects and prevents server raids, mass deletions, and malicious activities in real-time.</p>
                 </div>
 
-                <div class="developer-card">
-                    <div class="developer-avatar">
-                        <img src="https://cdn.discordapp.com/attachments/1247058898846748705/1397532037186982040/zade_527.png?ex=688210a2&is=6880bf22&hm=8b8db4871f197cf73edaed860c06f950008937af28817a5803d1d64b551908ad&" alt="Samael">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <h3>Samael</h3>
-                    <p class="developer-role">Web Developer & Manager</p>
-                    <p class="developer-bio">Manages Trident Bot operations and develops web interfaces for seamless user experience.</p>
+                    <h3>Auto Moderation</h3>
+                    <p>Intelligent automod system that filters spam, bad words, and unwanted content automatically to keep your server clean.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Ticket System</h3>
+                    <p>Professional ticket management with custom panels, categories, and role permissions for seamless member support.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Level System</h3>
+                    <p>Engage your community with message and voice activity tracking, customizable level-up rewards, and live leaderboards.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Auto Logging</h3>
+                    <p>Comprehensive server logs tracking all events including message edits, deletions, role changes, and member activities.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Moderation Tools</h3>
+                    <p>Complete moderation suite with kick, ban, mute, warn, timeout, and advanced channel management capabilities.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Welcome & Leave Messages</h3>
+                    <p>Customizable welcome and goodbye messages with embeds, images, and auto-delete options to greet your members.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Boost Tracking</h3>
+                    <p>Track and celebrate server boosts with custom messages, DM notifications, and special role rewards for boosters.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Highly Customizable</h3>
+                    <p>Tailor every feature to your needs with extensive configuration options, custom prefixes, and flexible permission settings.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+   
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -135,5 +202,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="protection.js"></script>
 </body>
 </html>

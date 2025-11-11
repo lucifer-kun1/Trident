@@ -6,6 +6,18 @@
     <title>Trident Bot Commands</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Commands page mobile adjustments */
+        @media (max-width: 640px) {
+            .cmd-page h1 { font-size: 1.9rem !important; }
+            .commands-box { padding: 1.25rem !important; border-radius: 16px !important; }
+            .commands-category h2 { font-size: 1.25rem !important; }
+            .commands-category ul { padding-left: 1rem !important; }
+            .commands-category li { margin-bottom: 0.6rem !important; font-size: 0.95rem; }
+        }
+        /* Make long commands wrap nicely */
+        code { white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere; }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -21,6 +33,13 @@
                 <a href="apps.html" class="nav-link">Apps</a>
                 <a href="premium.html" class="nav-link">Premium</a>
                 <div class="nav-dropdown">
+                    <a href="#" class="nav-link">Authority <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="authority.html">Developers</a>
+                        <a href="authority.html#partners">Partners</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
                     <a href="#" class="nav-link">Legal <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="privacy.html">Privacy Policy</a>
@@ -28,6 +47,8 @@
                     </div>
                 </div>
                 <!-- Mobile-only links -->
+                <a href="authority.html" class="nav-link mobile-only">Developers</a>
+                <a href="authority.html#partners" class="nav-link mobile-only">Partners</a>
                 <a href="privacy.html" class="nav-link mobile-only">Privacy Policy</a>
                 <a href="tos.html" class="nav-link mobile-only">Terms of Service</a>
             </div>
@@ -40,12 +61,12 @@
     </nav>
 
     <!-- Commands Section -->
-    <section style="padding: 120px 0 80px;">
+    <section class="cmd-page" style="padding: 120px 0 80px;">
         <div class="container">
             <h1 style="text-align: center; font-size: 3rem; margin-bottom: 1rem; color: #ffd700; text-shadow: 0 0 20px #ffd700;">Trident Bot Commands</h1>
             <p style="text-align: center; font-size: 1.3rem; margin-bottom: 3rem; color: #f0f0f0; opacity: 0.9;">Simple and powerful commands for server management</p>
             
-            <div style="max-width: 1000px; margin: 0 auto; background: rgba(255, 215, 0, 0.1); padding: 3rem; border-radius: 25px; border: 2px solid rgba(255, 215, 0, 0.3);">
+            <div class="commands-box" style="max-width: 1000px; margin: 0 auto; background: rgba(255, 215, 0, 0.1); padding: 3rem; border-radius: 25px; border: 2px solid rgba(255, 215, 0, 0.3);">
                 <div class="commands-category" style="margin-bottom: 2rem;">
                     <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Antinuke Commands</h2>
                     <ul style="padding-left: 2rem;">
@@ -196,6 +217,111 @@
                         <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voice add &lt;@user/id&gt;</code> - Add voice time to a user</li>
                         <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voice remove &lt;@user/id&gt;</code> - Remove voice time from a user</li>
                         <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voice reset &lt;@user/all&gt;</code> - Reset voice count</li>
+                    </ul>
+                </div>
+
+                <!-- Voice Level System -->
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Voice Level System</h2>
+                    <p style="color:#ffd700; font-weight:600; margin-top:0.5rem;">CORE</p>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel enable</code> - Enable the level system.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel disable</code> - Disable the level system.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel reset</code> - Reset all level data in the server.</li>
+                    </ul>
+                    <p style="color:#ffd700; font-weight:600; margin-top:0.8rem;">BLACKLIST</p>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel blacklist add &lt;#channel/@role/@category/ID&gt;</code> - Add a channel, role, or category to the blacklist.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel blacklist remove &lt;#channel/@role/@category/ID&gt;</code> - Remove a channel, role, or category from the blacklist.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel blacklist list</code> - Show all blacklisted items.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel blacklist reset</code> - Clear the blacklist.</li>
+                    </ul>
+                    <p style="color:#ffd700; font-weight:600; margin-top:0.8rem;">REWARDS</p>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel reward add &lt;level&gt; &lt;@role&gt;</code> - Give a role when user reaches a level.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel reward remove &lt;level&gt;</code> - Remove the role reward for a level.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel reward list</code> - Show all current level rewards.</li>
+                    </ul>
+                    <p style="color:#ffd700; font-weight:600; margin-top:0.8rem;">LEVEL-UP CHANNEL</p>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel channel set &lt;#channel&gt;</code> - Set level-up message channel.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel channel remove</code> - Remove level-up channel.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel channel show</code> - Show the current level-up channel.</li>
+                    </ul>
+                    <p style="color:#ffd700; font-weight:600; margin-top:0.8rem;">LEVEL-UP MESSAGES</p>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel message normal &lt;msg&gt;</code> - Set a normal text level-up message.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel message embed &lt;msg&gt;</code> - Set an embed level-up message.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel message show</code> - Preview the current message.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel message reset</code> - Reset level-up message.</li>
+                    </ul>
+                    <p style="color:#ffd700; font-weight:600; margin-top:0.8rem;">USER MANAGEMENT</p>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel add @user &lt;amount&gt;</code> - Add level/XP to a user (e.g. <code>6.77</code> → 6 levels + 77 XP).</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel remove @user &lt;amount&gt;</code> - Remove level/XP from a user (e.g. <code>2.50</code> → 2 levels + 50 XP).</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel reset @user</code> - Reset a user’s level.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel reset all</code> - Reset all users in the server.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>vclevel @user</code> - Check a user’s rank profile.</li>
+                    </ul>
+                </div>
+
+                <!-- Message Level System -->
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Message Level System</h2>
+                    <p style="color:#ffd700; font-weight:600; margin-top:0.5rem;">CORE</p>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code>level enable</code> - Enable the level system.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level disable</code> - Disable the level system.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level reset</code> - Reset all level data in the server.</li>
+                    </ul>
+                    <p style="color:#ffd700; font-weight:600; margin-top:0.8rem;">BLACKLIST</p>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code>level blacklist add &lt;#channel/@role/@category/ID&gt;</code> - Add a channel, role, or category to the blacklist.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level blacklist remove &lt;#channel/@role/@category/ID&gt;</code> - Remove a channel, role, or category from the blacklist.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level blacklist list</code> - Show all blacklisted items.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level blacklist reset</code> - Clear the blacklist.</li>
+                    </ul>
+                    <p style="color:#ffd700; font-weight:600; margin-top:0.8rem;">REWARDS</p>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code>level reward add &lt;level&gt; &lt;@role&gt;</code> - Give a role when user reaches a level.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level reward remove &lt;level&gt;</code> - Remove the role reward for a level.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level reward list</code> - Show all current level rewards.</li>
+                    </ul>
+                    <p style="color:#ffd700; font-weight:600; margin-top:0.8rem;">LEVEL-UP CHANNEL</p>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code>level channel set &lt;#channel&gt;</code> - Set level-up message channel.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level channel remove</code> - Remove level-up channel.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level channel show</code> - Show the current level-up channel.</li>
+                    </ul>
+                    <p style="color:#ffd700; font-weight:600; margin-top:0.8rem;">LEVEL-UP MESSAGES</p>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code>level message normal &lt;msg&gt;</code> - Set a normal text level-up message.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level message embed &lt;msg&gt;</code> - Set an embed level-up message.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level message show</code> - Preview the current message.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level message reset</code> - Reset level-up message.</li>
+                    </ul>
+                    <p style="color:#ffd700; font-weight:600; margin-top:0.8rem;">USER MANAGEMENT</p>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code>level add @user &lt;amount&gt;</code> - Add level/XP to a user (e.g. <code>6.77</code> → 6 levels + 77 XP).</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level remove @user &lt;amount&gt;</code> - Remove level/XP from a user (e.g. <code>2.50</code> → 2 levels + 50 XP).</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level reset @user</code> - Reset a user’s level.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level reset all</code> - Reset all users in the server.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>level @user</code> - Check a user’s rank profile.</li>
+                    </ul>
+                </div>
+
+                <!-- AutoLogs Commands -->
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">AutoLogs Commands</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code>autologs enable</code> - Enable the AutoLogs system.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>autologs disable</code> - Disable the AutoLogs system.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>autologs auto</code> - Automatically setup the full system (requires enable).</li>
+                        <li style="margin-bottom: 0.8rem;"><code>autologs reset</code> - Reset AutoLogs data (full reset).</li>
+                        <li style="margin-bottom: 0.8rem;"><code>autologs set &lt;event|all&gt; &lt;#channel|channelId&gt;</code> - Set a channel for specific event logging or all events.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>autologs remove &lt;event&gt; &lt;#channel|channelId&gt;</code> - Remove a specific channel from an event.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>autologs show</code> - Show current AutoLogs configuration in an embed.</li>
+                        <li style="margin-bottom: 0.8rem;"><code>autologs help</code> - Show the AutoLogs help guide.</li>
                     </ul>
                 </div>
 

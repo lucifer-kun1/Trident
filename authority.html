@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authority - Trident Bot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .authority-page {
+            padding: 120px 0 80px;
+        }
+        .doc-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 215, 0, 0.1);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+        .doc-content h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+            text-shadow: 0 0 20px #ffd700;
+        }
+        .doc-content h2 {
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem;
+            color: #ffd700;
+            text-shadow: 0 0 15px #ffd700;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+            padding-bottom: 0.5rem;
+        }
+        .authority-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .authority-card {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+        .authority-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+            border-color: #ffd700;
+            background: rgba(139, 69, 19, 0.2);
+        }
+        .authority-avatar {
+            margin-bottom: 1.5rem;
+        }
+        .authority-avatar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #ffd700;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+        .authority-card:hover .authority-avatar img {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
+        }
+        .authority-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: #ffd700;
+            text-shadow: 0 0 10px #ffd700;
+        }
+        .authority-role {
+            font-size: 1.1rem;
+            color: #ffb400;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .authority-bio {
+            color: #f0f0f0;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        .partner-logo {
+            font-size: 4rem;
+            color: #ffd700;
+            text-shadow: 0 0 20px #ffd700;
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 768px) {
+            .doc-content {
+                padding: 2rem 1.5rem;
+            }
+            .doc-content h1 {
+                font-size: 2.2rem;
+            }
+            .doc-content h2 {
+                font-size: 1.6rem;
+            }
+            .authority-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://cdn.discordapp.com/attachments/1247058898846748705/1397531761797365812/trident.gif?ex=68821060&is=6880bee0&hm=c54b2e92eacd7a044c1c571d5c7d344fdf4b4fb319dbe39377537253a9e068dc&" alt="Trident" class="logo-img">
+                <h2>TRIDENT</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="commands.html" class="nav-link">Commands</a>
+                <a href="apps.html" class="nav-link">Apps</a>
+                <a href="premium.html" class="nav-link">Premium</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link">Authority <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="authority.html">Developers</a>
+                        <a href="authority.html#partners">Partners</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link">Legal <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="tos.html">Terms of Service</a>
+                    </div>
+                </div>
+                <!-- Mobile-only links -->
+                <a href="authority.html" class="nav-link mobile-only">Developers</a>
+                <a href="authority.html#partners" class="nav-link mobile-only">Partners</a>
+                <a href="privacy.html" class="nav-link mobile-only">Privacy Policy</a>
+                <a href="tos.html" class="nav-link mobile-only">Terms of Service</a>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Authority Content -->
+    <section class="authority-page">
+        <div class="container">
+            <div class="doc-content">
+                <h1>Authority</h1>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem; color: #f0f0f0; opacity: 0.9;">
+                    Meet the team behind Trident Bot and our trusted partners
+                </p>
+
+                <!-- Developers Section -->
+                <h2 id="developers">Our Developers</h2>
+                <p style="color: #f0f0f0; opacity: 0.9; margin-bottom: 2rem;">
+                    The brilliant minds behind Trident Bot, dedicated to creating the most secure and feature-rich Discord bot.
+                </p>
+                
+                <div class="authority-grid">
+                    <div class="authority-card">
+                        <div class="authority-avatar">
+                            <img src="https://cdn.discordapp.com/attachments/1247058898846748705/1397532284667560007/saffi45.png?ex=688210dd&is=6880bf5d&hm=ec6be9ddfed4ca86921550a05b141a9f018dfcb7999934969fb6784c9ac9f179&" alt="Anvi">
+                        </div>
+                        <h3>Anvi</h3>
+                        <p class="authority-role">Lead Developer & Founder</p>
+                        <p class="authority-bio">Creator of Trident Bot with expertise in Discord bot development and server security systems. Passionate about building reliable and powerful tools for Discord communities.</p>
+                    </div>
+
+                    <div class="authority-card">
+                        <div class="authority-avatar">
+                            <img src="https://cdn.discordapp.com/attachments/1247058898846748705/1397532037186982040/zade_527.png?ex=688210a2&is=6880bf22&hm=8b8db4871f197cf73edaed860c06f950008937af28817a5803d1d64b551908ad&" alt="Samael">
+                        </div>
+                        <h3>Samael</h3>
+                        <p class="authority-role">Web Developer & Manager</p>
+                        <p class="authority-bio">Manages Trident Bot operations and develops web interfaces for seamless user experience. Focused on creating intuitive and beautiful user interfaces.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 2rem 0; padding: 2rem; background: rgba(255, 215, 0, 0.05); border-radius: 15px; border: 1px solid rgba(255, 215, 0, 0.2);">
+                    <p style="color: #f0f0f0; opacity: 0.9; margin-bottom: 1rem;">
+                        <strong style="color: #ffd700;">Horizon Developers</strong> - A team committed to excellence
+                    </p>
+                    <p style="color: #f0f0f0; opacity: 0.8; font-size: 0.95rem;">
+                        Contact: <a href="mailto:horizondevelopersdc@gmail.com" style="color: #ffd700; text-decoration: none;">horizondevelopersdc@gmail.com</a>
+                    </p>
+                </div>
+
+                <!-- Partners Section -->
+                <h2 id="partners">Our Partners</h2>
+                <p style="color: #f0f0f0; opacity: 0.9; margin-bottom: 2rem;">
+                    Trusted organizations and collaborators who help make Trident Bot better every day.
+                </p>
+                
+                <div class="authority-grid">
+                    <div class="authority-card">
+                        <div class="partner-logo">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Community Partners</h3>
+                        <p class="authority-bio">We collaborate with leading Discord communities to ensure Trident Bot meets the highest standards of security and functionality.</p>
+                    </div>
+
+                    <div class="authority-card">
+                        <div class="partner-logo">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Security Advisors</h3>
+                        <p class="authority-bio">Working with cybersecurity experts to provide cutting-edge anti-nuke protection and threat detection systems.</p>
+                    </div>
+
+                    <div class="authority-card">
+                        <div class="partner-logo">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Technology Partners</h3>
+                        <p class="authority-bio">Partnering with leading technology providers to deliver fast, reliable, and scalable bot infrastructure.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(255, 215, 0, 0.05); border-radius: 15px; border: 1px solid rgba(255, 215, 0, 0.2);">
+                    <h3 style="color: #ffd700; margin-bottom: 1rem; font-size: 1.5rem;">Interested in Partnering?</h3>
+                    <p style="color: #f0f0f0; opacity: 0.9; margin-bottom: 1.5rem;">
+                        We're always looking for new partnerships to expand Trident Bot's capabilities.
+                    </p>
+                    <a href="mailto:horizondevelopersdc@gmail.com" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://cdn.discordapp.com/attachments/1247058898846748705/1397531761797365812/trident.gif?ex=68821060&is=6880bee0&hm=c54b2e92eacd7a044c1c571d5c7d344fdf4b4fb319dbe39377537253a9e068dc&" alt="Trident" class="footer-logo-img">
+                    <span>TRIDENT</span>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <a href="https://discord.gg/lovers-arenaa">Support Server</a>
+                        <a href="mailto:horizondevelopersdc@gmail.com">Email Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Legal</h4>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="tos.html">Terms of Service</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Authority</h4>
+                        <a href="authority.html">Developers</a>
+                        <a href="authority.html#partners">Partners</a>
+                    </div>
+                </div>
+                <p>&copy; 2025 Trident Bot. Developed by Anvi & Horizon Developers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="protection.js"></script>
+</body>
+</html>
