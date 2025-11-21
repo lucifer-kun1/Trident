@@ -1,4 +1,5 @@
-
+// Source Code Protection Script
+// Note: This provides deterrence, not absolute protection
 
 (function() {
     'use strict';
@@ -117,4 +118,3 @@
     }, 1000);
     
 })();
-

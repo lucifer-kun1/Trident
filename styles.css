@@ -21,7 +21,7 @@ body {
     padding: 0 20px;
 }
 
-
+/* Subtle Glow Effect */
 @keyframes subtleGlow {
     0% {
         box-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
@@ -35,7 +35,7 @@ body {
     animation: subtleGlow 2s ease-in-out infinite alternate;
 }
 
-
+/* Navigation */
 .navbar {
     position: fixed;
     top: 0;
@@ -113,6 +113,7 @@ body {
     box-shadow: 0 0 5px #ffd700;
 }
 
+/* Hero Section */
 .hero {
     padding: 120px 0 80px;
     text-align: center;
@@ -296,7 +297,7 @@ body {
     color: #f0f0f0;
 }
 
-
+/* Floating Background Elements */
 .hero-bg-elements {
     position: absolute;
     top: 0;
@@ -349,7 +350,7 @@ body {
     }
 }
 
-
+/* Features Section */
 .features-section {
     padding: 100px 0;
     background: rgba(0, 0, 0, 0.3);
@@ -439,7 +440,7 @@ body {
     z-index: 1;
 }
 
-
+/* Contact Section */
 .contact {
     padding: 100px 0;
     text-align: center;
@@ -497,7 +498,7 @@ body {
     font-size: 1.5rem;
 }
 
-
+/* Footer */
 .footer {
     padding: 3rem 0;
     background: rgba(0, 0, 0, 0.8);
@@ -536,7 +537,7 @@ body {
     opacity: 0.8;
 }
 
- 
+/* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -600,18 +601,18 @@ body {
     }
 }
 
-
+/* Hover Effects for Interactive Elements */
 .nav-link, .btn, .contact-link, .developer-card, .feature-highlight {
     cursor: pointer;
 }
 
-
+/* Selection Effect */
 ::selection {
     background: rgba(255, 215, 0, 0.3);
     color: #1a1a1a;
 }
 
-
+/* Scrollbar Styling */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -629,7 +630,7 @@ body {
     background: linear-gradient(45deg, #ffb400, #ffd700);
 }
 
-
+/* Footer Sections */
 .footer-links {
     display: flex;
     justify-content: center;
@@ -669,7 +670,7 @@ body {
     width: 16px;
 }
 
-
+/* Navigation Dropdown */
 .nav-dropdown {
     position: relative;
     display: inline-block;
@@ -718,12 +719,12 @@ body {
     background: rgba(255, 215, 0, 0.1);
 }
 
-
+/* Hide mobile-only links on desktop */
 .mobile-only {
     display: none;
 }
 
-
+/* Footer Links Styling */
 .footer-section a {
     display: block;
     color: #ccc;
@@ -744,7 +745,7 @@ body {
     font-size: 0.9rem;
 }
 
-
+/* Mobile Navigation */
 .mobile-menu {
     display: none;
     position: fixed;
@@ -783,7 +784,7 @@ body {
     margin-left: 1rem;
 }
 
-
+/* Enhanced Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -808,7 +809,7 @@ body {
         display: flex;
     }
     
-    
+    /* Hide the desktop dropdown on mobile */
     .nav-dropdown {
         display: none;
     }
@@ -831,7 +832,7 @@ body {
         border-bottom: none;
     }
     
-    
+    /* Show mobile-only links on mobile */
     .mobile-only {
         display: block;
     }
@@ -884,7 +885,7 @@ body {
         text-align: center;
     }
     
-    
+    /* Commands page responsive */
     .commands-category {
         margin-bottom: 2rem;
     }
@@ -947,7 +948,7 @@ body {
         justify-content: center;
     }
     
-    
+    /* Commands page mobile */
     .commands-category h2 {
         font-size: 1.5rem;
     }
@@ -964,7 +965,7 @@ body {
         margin-bottom: 0.3rem;
     }
     
-    
+    /* Legal pages mobile optimization */
     .doc-content {
         padding: 2rem 1rem !important;
         margin: 0 15px !important;
@@ -984,7 +985,7 @@ body {
     }
 }
 
-
+/* Extra small devices (phones, 375px and down) */
 @media (max-width: 375px) {
     .container {
         padding: 0 10px;
@@ -1048,7 +1049,7 @@ body {
     }
 }
 
-
+/* Landscape phones */
 @media (max-width: 768px) and (orientation: landscape) {
     .hero {
         padding: 100px 0 60px;
@@ -1067,7 +1068,7 @@ body {
     }
 }
 
-
+/* High DPI displays */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .logo-img, .footer-logo-img {
         image-rendering: -webkit-optimize-contrast;
@@ -1075,7 +1076,7 @@ body {
     }
 }
 
-
+/* Touch-friendly hover states */
 @media (hover: none) and (pointer: coarse) {
     .nav-link:hover, .btn:hover, .contact-link:hover {
         transform: none;
@@ -1087,13 +1088,13 @@ body {
     }
 }
 
-
+/* Improve readability on small screens */
 @media (max-width: 480px) {
     body {
-        font-size: 16px; 
+        font-size: 16px; /* Prevents zoom on iOS */
     }
     
-    
+    /* Better spacing for touch targets */
     .nav-link {
         padding: 12px 20px;
         margin: 5px 0;
@@ -1104,12 +1105,12 @@ body {
         font-size: 1rem;
     }
     
-    
+    /* Improve form inputs and buttons */
     input, button, .btn {
-        min-height: 44px; 
+        min-height: 44px; /* Apple's recommended touch target size */
     }
     
-    
+    /* Better command visibility */
     .commands-category {
         background: rgba(255, 215, 0, 0.05);
         padding: 1rem;
@@ -1131,4 +1132,3 @@ body {
         border: 1px solid rgba(255, 215, 0, 0.5);
     }
 }
-
